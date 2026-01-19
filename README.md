@@ -18,12 +18,14 @@ Clean and filter the data (remove missing and very short abstracts).
 Build a balanced subset (up to ~1,200 samples, or 800 on CPU-only).
 Split into train / val / test (80/10/10, stratified by label).
 Train a DistilBERT classifier for 1 epoch.
+
 Save artifacts:
 final_model/ (model + tokenizer + labels.json)
 train.csv, val.csv, test.csv
 metrics.json (includes accuracy, macro precision/recall/F1, per-class metrics)
 confusion_matrix.csv
 misclassified_samples.csv
+
 3. Running the API locally
 After training has completed and final_model/ exists:
 
